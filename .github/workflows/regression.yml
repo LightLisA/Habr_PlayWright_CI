@@ -40,6 +40,8 @@ jobs:
           python-version: '3.11'
       - name: Install dependencies
         run: python3 -m pip install -r requirements.txt
+      - name: Replace qaseio model imports
+        run: python3 .github/workflows/replaceQaseioModel.py
       - run: |
           if [ "${{github.event_name}}" = "schedule" ]; then
             export args="-m regression"

@@ -3,7 +3,3 @@ playwright
 requests
 qase-pytest==4.2.0
 python-dotenv
-setuptools
-qaseio
-python-dotenv
-pypresence

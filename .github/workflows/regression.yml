@@ -40,8 +40,14 @@ jobs:
           python-version: '3.11'
       - name: Install dependencies
         run: python3 -m pip install -r requirements.txt
-      - name: Replace qaseio model imports
-        run: python3 .github/workflows/replaceQaseioModel.py
+      #- name: Replace qaseio model imports
+      #  run: python3 .github/workflows/replaceQaseioModel.py
+      - name: Find and replace imports in qaseio
+        run: |
+          # Знайдемо файл testops.py
+          testops_path=$(find /__w/ -name "testops.py" | head -n 1)
+          # Виконаємо Python-скрипт для заміни імпортів
+          python3 .github/workflows/replaceQaseioModel.py $testops_path
       - run: |
           if [ "${{github.event_name}}" = "schedule" ]; then
             export args="-m regression"

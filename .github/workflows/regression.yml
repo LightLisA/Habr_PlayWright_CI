@@ -42,17 +42,17 @@ jobs:
         run: python3 -m pip install -r requirements.txt
       #- name: Replace qaseio model imports
       #  run: python3 .github/workflows/replaceQaseioModel.py
-      - name: Find and replace imports in qaseio
-        run: |
-          # Знайдемо файл testops.py по всій файловій системі
-          testops_path=$(find / -name "testops.py" 2>/dev/null | head -n 1)
-          if [ -z "$testops_path" ]; then
-            echo "File testops.py not found"
-            exit 1
-          fi
-          # Виконаємо Python-скрипт для заміни імпортів
-          echo "Found testops.py at: $testops_path"
-          python3 .github/workflows/replaceQaseioModel.py "$testops_path"
+      #- name: Find and replace imports in qaseio
+      #  run: |
+      #    # Знайдемо файл testops.py по всій файловій системі
+      #    testops_path=$(find / -name "testops.py" 2>/dev/null | head -n 1)
+      #    if [ -z "$testops_path" ]; then
+      #      echo "File testops.py not found"
+      #      exit 1
+      #    fi
+      #    # Виконаємо Python-скрипт для заміни імпортів
+      #    echo "Found testops.py at: $testops_path"
+      #    python3 .github/workflows/replaceQaseioModel.py "$testops_path"
           
       - run: |
           if [ "${{github.event_name}}" = "schedule" ]; then

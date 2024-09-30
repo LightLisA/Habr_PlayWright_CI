@@ -44,14 +44,14 @@ jobs:
       #  run: python3 .github/workflows/replaceQaseioModel.py
       - name: Find and replace imports in qaseio
         run: |
-          # Знайдемо файл testops.py
-          testops_path=$(find /__w/ -name "testops.py" | head -n 1)
+          # Знайдемо файл testops.py по всій файловій системі
+          testops_path=$(find / -name "testops.py" 2>/dev/null | head -n 1)
           if [ -z "$testops_path" ]; then
             echo "File testops.py not found"
             exit 1
           fi
           # Виконаємо Python-скрипт для заміни імпортів
-          echo "$testops_path"
+          echo "Found testops.py at: $testops_path"
           python3 .github/workflows/replaceQaseioModel.py "$testops_path"
           
       - run: |

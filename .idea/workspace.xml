@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98ff8d72-2556-4552-a90a-f833344116fa" name="Changes" comment="Add contents in:&#10;- basket_page.py&#10;- market_page.py&#10;- market_main_page.py&#10;- test_buy_product.py">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="98ff8d72-2556-4552-a90a-f833344116fa" name="Changes" comment="Add print for debugging 2">
       <change beforePath="$PROJECT_DIR$/data/assertions.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/assertions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixtures/user_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixtures/user_auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_buy_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_buy_product.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/main_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main_page.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +162,31 @@
       <option name="project" value="LOCAL" />
       <updated>1727703802661</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add print for debugging">
+      <option name="closed" value="true" />
+      <created>1727770494459</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1727770494459</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add print for debugging">
+      <option name="closed" value="true" />
+      <created>1727770530607</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1727770530607</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add print for debugging 2">
+      <option name="closed" value="true" />
+      <created>1727770905536</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1727770905536</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -184,7 +204,9 @@
     <MESSAGE value="Как написать проект по автоматизации на Python, Pytest и Playwright и настроить запуск автотестов в CI с нуля" />
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="Add contents in:&#10;- basket_page.py&#10;- market_page.py&#10;- market_main_page.py&#10;- test_buy_product.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add contents in:&#10;- basket_page.py&#10;- market_page.py&#10;- market_main_page.py&#10;- test_buy_product.py" />
+    <MESSAGE value="Add print for debugging" />
+    <MESSAGE value="Add print for debugging 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add print for debugging 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -196,7 +218,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/pages/main_page.py</url>
-          <line>16</line>
+          <line>20</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

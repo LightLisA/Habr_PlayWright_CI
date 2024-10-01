@@ -10,8 +10,8 @@ class Assertions(Base):
 
     def check_URL(self, uri, msg):
         print(f"\nGet Host: {host.get_base_url()}")
-        print(f"\nGet Host + URI: {host.get_base_url()}{uri}")
-        print(f"\nCurrent URL:    {self.page.url}")
+        print(f"\nGet Host + URI:  {host.get_base_url()}{uri}")
+        print(f"\nCurrent URL:     {self.page.url}")
         expect(self.page).to_have_url(f"{host.get_base_url()}{uri}", timeout=10000), msg
 
     def have_text(self, locator, text: str, msg):  # элемент имеет текст

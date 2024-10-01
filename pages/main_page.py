@@ -11,8 +11,13 @@ class Main(Base):
         self.assertion = Assertions(page)
 
     def user_login(self):
+        print(f"\n === User Login case")
         self.open("")
+        print(f"1. Open page -  {self.page}")
         self.input(Auth.USERNAME_INPUT, Constants.login)
+        print(f"2. Enter User name")
         self.input(Auth.PASSWORD_INPUT, Constants.password)
+        print(f"3. Enter User password")
         self.click(Auth.LOGIN_BTN)
+        print(f"4. Check page after click -  {self.page}")
         self.assertion.check_URL("inventory.html", "Wrong URL")

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98ff8d72-2556-4552-a90a-f833344116fa" name="Changes" comment="Add print for debugging 2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="98ff8d72-2556-4552-a90a-f833344116fa" name="Changes" comment="Remove print for debugging" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -193,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727770978460</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Remove print for debugging">
+      <option name="closed" value="true" />
+      <created>1727771671642</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1727771671642</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -213,22 +219,11 @@
     <MESSAGE value="Add contents in:&#10;- basket_page.py&#10;- market_page.py&#10;- market_main_page.py&#10;- test_buy_product.py" />
     <MESSAGE value="Add print for debugging" />
     <MESSAGE value="Add print for debugging 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add print for debugging 2" />
+    <MESSAGE value="Remove print for debugging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove print for debugging" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/data/assertions.py</url>
-          <line>14</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/pages/main_page.py</url>
-          <line>20</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">

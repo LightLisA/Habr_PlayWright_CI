@@ -2,6 +2,6 @@ playwright
 pytest-playwright
 pytest
 requests
-qase-pytest==4.2.0
+qase-pytest
 python-dotenv
-qaseio==3.4.1
+qase-api-client

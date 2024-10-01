@@ -53,6 +53,14 @@ jobs:
       #    # Виконаємо Python-скрипт для заміни імпортів
       #    echo "Found testops.py at: $testops_path"
       #    python3 .github/workflows/replaceQaseioModel.py "$testops_path"
+      - name: Find the file and replace the import
+        run: |
+          FILE=$(find . -type f -path "*site-packages/qaseio/commons/testops.py")
+          if [ -n "$FILE" ]; then
+            sed -i 's/from qaseio.model/from qaseio.models/g' "$FILE"
+          else
+            echo "File not found"
+          fi
           
       - run: |
           if [ "${{github.event_name}}" = "schedule" ]; then

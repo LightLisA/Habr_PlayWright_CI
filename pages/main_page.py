@@ -10,9 +10,13 @@ class Main(Base):
         super().__init__(page)
         self.assertion = Assertions(page)
 
-    def user_login(self):
+    def open_login_page(self):
         self.open("")
+
+    def user_login(self):
         self.input(Auth.USERNAME_INPUT, Constants.login)
         self.input(Auth.PASSWORD_INPUT, Constants.password)
         self.click(Auth.LOGIN_BTN)
+
+    def assertion_login_check(self):
         self.assertion.check_URL("inventory.html", "Wrong URL")

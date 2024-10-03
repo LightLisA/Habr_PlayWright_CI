@@ -21,4 +21,6 @@ class MarketPage(Base):
         self.input(Basket.ZIP, "123456")
         self.click(Basket.CONTINUE_BTN)
         self.click(Basket.FINISH_BTN)
+
+    def is_purchase_successful(self):
         self.assertions.have_text(Basket.FINAL_TEXT, "Checkout: Complete!", "no")

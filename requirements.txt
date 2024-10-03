@@ -1,6 +1,9 @@
 playwright
 pytest-playwright
 pytest
+pytest-bdd
+pytest-gherkin
+pytest-selenium
 requests
 qase-pytest
 python-dotenv

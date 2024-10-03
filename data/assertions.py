@@ -56,8 +56,7 @@ class Assertions(Base):
         loc = self.page.locator(locator)
         expect(loc).to_contain_text(text), msg
 
-    def select_have_values(self, locator, options: list,
-                           msg):  # Select имеет опции для выбора (опция передается аргументом к проверке)
+    def select_have_values(self, locator, options: list, msg):  # Select имеет опции для выбора (опция передается аргументом к проверке)
         loc = self.page.locator(locator)
         loc.select_option(options)
         expect(loc).to_have_values(options), msg

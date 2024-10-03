@@ -14,11 +14,11 @@ class MarketPage(Base):
         self.click_element_by_index(Market.ADD_TO_CART, 0)  # кликаем по индексу, 0 это значит, что кликаем по первой карточке
         self.click(Market.FOLLOW_TO_BASKET)
 
-    def checkout(self):
+    def checkout(self, first_name, last_name, zip_value):
         self.click(Basket.CHECKOUT_BTN)
-        self.input(Basket.FIRST_NAME, "Ivan")
-        self.input(Basket.LAST_NAME, "Ivanov")
-        self.input(Basket.ZIP, "123456")
+        self.input(Basket.FIRST_NAME, f"{first_name}")
+        self.input(Basket.LAST_NAME, f"{last_name}")
+        self.input(Basket.ZIP, f"{zip_value}")
         self.click(Basket.CONTINUE_BTN)
         self.click(Basket.FINISH_BTN)
 

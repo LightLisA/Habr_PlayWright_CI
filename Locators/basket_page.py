@@ -6,3 +6,4 @@ class Basket:
     CONTINUE_BTN = "[data-test='continue']"
     FINISH_BTN = "[data-test='finish']"
     FINAL_TEXT = "//span[text()='Checkout: Complete!']"
+

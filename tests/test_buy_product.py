@@ -1,5 +1,5 @@
 import pytest
-from pytest_bdd import scenario, given, when, then
+from pytest_bdd import scenario, given, when, then, parsers
 from pages.market_main_page import MarketPage
 
 
@@ -25,9 +25,9 @@ def add_products_to_cart(market_page):
     market_page.add_to_cart()
 
 
-@when('the user proceeds to checkout')
-def proceed_to_checkout(market_page):
-    market_page.checkout()
+@when(parsers.parse('the user proceeds to checkout with "{first_name}" and "{last_name}" and "{zip}"'))
+def proceed_to_checkout(market_page, first_name, last_name, zip):
+    market_page.checkout(first_name, last_name, zip)
 
 
 @then('the product should be successfully purchased')

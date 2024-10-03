@@ -3,6 +3,7 @@ pytest-playwright
 pytest
 pytest-bdd
 pytest-gherkin
+allure-pytest-bdd
 pytest-selenium
 requests
 qase-pytest

@@ -1,3 +1,5 @@
+import allure
+
 from pages.base import Base
 # from data.constants import Constants
 from Locators.auth import Auth
@@ -10,14 +12,17 @@ class Main(Base):
         super().__init__(page)
         self.assertion = Assertions(page)
 
+    @allure.step("Opening login page")
     def open_login_page(self):
         self.open("")
 
+    @allure.step("Login in as user")
     def user_login(self, login, password):
         self.input(Auth.USERNAME_INPUT, login)
         self.input(Auth.PASSWORD_INPUT, password)
         self.click(Auth.LOGIN_BTN)
 
+    @allure.step("Check that login was successful")
     def assertion_login_check(self, successfully):
         if successfully == 'YES':
             self.assertion.check_URL("inventory.html", "Wrong URL")
@@ -25,3 +30,8 @@ class Main(Base):
             expect_result = "Epic sadface: Sorry, this user has been locked out."
             self.assertion.have_text(Auth.LOGIN_ERROR_MESSAGE, expect_result,
                                      f"Message does not match: \nER:{expect_result} \nAR: {Auth.LOGIN_ERROR_MESSAGE}")
+
+    def assertion_login_warning_check(self):
+        expect_result = "Epic sadface: Sorry, this user has been locked out."
+        self.assertion.have_text(Auth.LOGIN_ERROR_MESSAGE, expect_result,
+                                 f"Message does not match: \nER:{expect_result} \nAR: {Auth.LOGIN_ERROR_MESSAGE}")

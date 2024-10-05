@@ -31,8 +31,8 @@ def test_unsuccessful_login():
 
 
 @pytest.fixture
-def main_page(browser):
-    return Main(browser)
+def main_page(page):
+    return Main(page)
 
 
 # ------------------ GIVE ------------------

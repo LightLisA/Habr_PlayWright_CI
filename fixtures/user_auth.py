@@ -5,9 +5,9 @@ from data.constants import Constants
 
 
 @pytest.fixture(scope='class')
-def user_login(browser):
+def user_login(page):
     with allure.step('User login fixture'):
-        main_page = Main(browser)
+        main_page = Main(page)
 
         with allure.step('Open login page'):
             main_page.open_login_page()

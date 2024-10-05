@@ -18,8 +18,8 @@ def test_successful_buying_products():
 
 
 @pytest.fixture
-def market_page(browser):
-    return MarketPage(browser)
+def market_page(page):
+    return MarketPage(page)
 
 
 @given('the user is logged in')

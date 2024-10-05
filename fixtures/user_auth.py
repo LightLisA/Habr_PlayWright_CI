@@ -16,4 +16,4 @@ def user_login(browser):
             main_page.user_login(Constants.login, Constants.password)
 
         with allure.step('Checking the successful entering'):
-            main_page.assertion_login_check("YES")
+            main_page.assertion_login_check()

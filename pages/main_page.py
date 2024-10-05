@@ -23,13 +23,8 @@ class Main(Base):
         self.click(Auth.LOGIN_BTN)
 
     @allure.step("Check that login was successful")
-    def assertion_login_check(self, successfully):
-        if successfully == 'YES':
-            self.assertion.check_URL("inventory.html", "Wrong URL")
-        else:
-            expect_result = "Epic sadface: Sorry, this user has been locked out."
-            self.assertion.have_text(Auth.LOGIN_ERROR_MESSAGE, expect_result,
-                                     f"Message does not match: \nER:{expect_result} \nAR: {Auth.LOGIN_ERROR_MESSAGE}")
+    def assertion_login_check(self):
+        self.assertion.check_URL("inventory.html", "Wrong URL")
 
     def assertion_login_warning_check(self):
         expect_result = "Epic sadface: Sorry, this user has been locked out."

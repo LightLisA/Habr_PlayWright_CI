@@ -39,7 +39,14 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install dependencies
-        run: python3 -m pip install -r requirements.txt
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r requirements.txt
+      
+      #  run: |
+      #      python3 -m pip install --upgrade pip
+      #      pip install pytest-playwright
+      
       #- name: Replace qaseio model imports
       #  run: python3 .github/workflows/replaceQaseioModel.py
       #- name: Find and replace imports in qaseio

@@ -7,6 +7,6 @@ allure-pytest
 allure-python-commons
 pytest-selenium
 requests
-qase-pytest
 python-dotenv
+qase-pytest
 qase-api-client

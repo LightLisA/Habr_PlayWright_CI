@@ -54,6 +54,9 @@ class Base:
     def click_by_text(self, text: str):  # находим элемент(кнопку)с нужным текстом внутри и кликаем
         self.page.get_by_text(text).click()
 
+    def click_by_exact_text(self, locator: str, text: str):
+        self.page.locator(locator).get_by_text(text).click()
+
     def input_in_shadow_root(self, shadow_locator: str, shadow_input_locator: str, data: str):
         # ищем элемент в шадоуруте
         shadow_root = self.page.evaluate_handle(f'document.querySelector("{shadow_locator}").shadowRoot')

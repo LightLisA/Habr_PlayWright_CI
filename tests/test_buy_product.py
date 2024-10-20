@@ -4,12 +4,12 @@ from pytest_bdd import scenario, given, when, then, parsers
 from pages.market_main_page import MarketPage
 
 
-@allure.suite("Authentication Suite")
+@allure.suite("Buying Product Suite")
 @allure.parent_suite("Main Application Tests")
-@allure.sub_suite("Successful buying products")
-@allure.story("Buy first product from the list")
+@allure.sub_suite("Successful Buying Products")
+@allure.story("Successful product purchase")
 @allure.title('Successful buying products')
-@allure.description('Test purchasing products with valid user data.')
+@allure.description('Test purchasing products by checking out with user details.')
 @pytest.mark.regression
 @pytest.mark.usefixtures('user_login')
 @scenario('../features/buy_products.feature', 'Successful buying products')
